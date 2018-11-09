@@ -1,4 +1,4 @@
-# NPD Frontend
+# react-apollo-auth-boilerplate
 
 ## Instalação e uso
 Clonar repositório, navegar até a pasta raiz e executar o comando a seguir (requer node e npm):
