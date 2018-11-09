@@ -1,0 +1,79 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier",
+      "react", 
+      "jsx-a11y"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "printWidth": 80
+        }
+      ],
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": [
+        "warn",
+        {
+          "aspects": [
+            "invalidHref"
+          ]
+        }
+      ],
+      "no-param-reassign": "off",
+      "function-paren-newline": "off",
+      
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ],
+      "import/no-extraneous-dependencies": 0,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "max-len": 0,
+      "no-console": 1,
+      "react/forbid-prop-types": 0,
+      "react/jsx-curly-brace-presence": "off",
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/require-default-props": 0,
+      "react/self-closing-comp": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "webpack": {
+          "config": "./config/webpack.prod.babel.js"
+        }
+      }
+    }
+  }
