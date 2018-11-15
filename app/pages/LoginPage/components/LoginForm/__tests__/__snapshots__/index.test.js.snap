@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> should render and match snapshot 1`] = `
+<Container
+  className="loginForm-module--App-3ruTd"
+  tag="div"
+>
+  <h2>
+    Sign In
+  </h2>
+  <Form
+    className="loginForm-module--form-l2wxs"
+    onSubmit={[Function]}
+    tag="form"
+  >
+    <Col
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <FormGroup
+        tag="div"
+      >
+        <Label
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Username
+        </Label>
+        <Input
+          id="exampleEmail"
+          name="email"
+          onChange={[Function]}
+          placeholder="myemail@email.com"
+          required={true}
+          type="text"
+          value=""
+        />
+      </FormGroup>
+    </Col>
+    <Col
+      tag="div"
+      widths={
+        Array [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ]
+      }
+    >
+      <FormGroup
+        tag="div"
+      >
+        <Label
+          for="examplePassword"
+          tag="label"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          Password
+        </Label>
+        <Input
+          id="examplePassword"
+          name="password"
+          onChange={[Function]}
+          placeholder="********"
+          required={true}
+          type="password"
+          value=""
+        />
+      </FormGroup>
+    </Col>
+    <Button
+      color="secondary"
+      disabled={false}
+      tag="button"
+    >
+      Submit
+    </Button>
+  </Form>
+</Container>
+`;

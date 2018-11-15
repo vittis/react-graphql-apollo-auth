@@ -4,8 +4,8 @@ import { withRouter } from 'react-router';
 import { Button } from 'reactstrap';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import { Mutation, Query } from 'react-apollo';
-import { AUTH_TOKEN, isExpired } from 'util/jwt';
-import { GET_AUTH_LOCAL, LOGOUT_MUTATION_LOCAL } from 'localStores/AuthStore';
+import { AUTH_TOKEN, isExpired } from 'modules/auth/util/jwt';
+import { GET_AUTH_LOCAL, LOGOUT_MUTATION_LOCAL } from 'modules/auth/AuthStore';
 import * as pathNames from 'routes/pathNames';
 import './header.module.scss';
 
@@ -20,13 +20,13 @@ class Header extends Component {
           if (error) return `Error! ${error.message}`;
           return (
             <div styleName="header">
-              <Link styleName="button" to={pathNames.BASE_PATH}>
-                <Button>Home</Button>
-              </Link>
               <Link styleName="button" to={pathNames.LEARNER_HOME}>
                 <Button disabled={isTokenExpired}>Meu Aprendizado</Button>
               </Link>
-              {data.authStatus.status === 'loggedIn' && !isTokenExpired ? (
+              <Link styleName="button" to={pathNames.ADMIN_HOME}>
+                <Button disabled={isTokenExpired}>Insights</Button>
+              </Link>
+              {data.status === 'loggedIn' && !isTokenExpired ? (
                 <Mutation mutation={LOGOUT_MUTATION_LOCAL}>
                   {logoutMutationLocal => (
                     <Button

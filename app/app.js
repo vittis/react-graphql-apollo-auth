@@ -13,13 +13,13 @@ import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'babel-polyfill';
-import App from 'containers/App';
+import App from 'pages/App';
 
 // Load the favicon
 /* eslint-disable import/no-webpack-loader-syntax */
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 
-import Client from './Client';
+import Client from 'config/Client';
 
 // Global Styles
 import './styles/theme.scss';
@@ -53,7 +53,7 @@ if (module.hot) {
   // Hot reloadable React components and translation json files
   // modules.hot.accept does not accept dynamic dependencies,
   // have to be constants at compile-time
-  module.hot.accept(['containers/App'], () => {
+  module.hot.accept(['pages/App'], () => {
     ReactDOM.unmountComponentAtNode(MOUNT_NODE);
     render();
   });

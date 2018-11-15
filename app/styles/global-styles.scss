@@ -17,3 +17,22 @@ body.fontLoaded {
   min-height: 100%;
   min-width: 100%;
 }
+// Inferior modal custom bootstrap class modification
+// TODO: Mover para elemento próprio do modal
+.bottom-modal-wrapper {
+  top: auto;
+  overflow-y: hidden !important;
+}
+.bottom-modal {
+  position: relative;
+  margin-bottom: 0 !important;
+  .modal.fade & {
+    transform: translate(0, 25%);
+  }
+  .modal.show & {
+    transform: translate(0, 0);
+  }
+}
+.bottom-modal__footer {
+  justify-content: flex-start;
+}

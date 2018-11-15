@@ -1,23 +1,30 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import HomePage from 'containers/HomePage/Loadable';
-import MeuAprendizadoPage from 'containers/MeuAprendizadoPage/Loadable';
-import LoginPage from 'containers/LoginPage/Loadable';
-import { ProtectedRoute } from 'routes/ProtectedRoute';
+import NotFoundPage from 'pages/NotFoundPage/Loadable';
+// import HomePage from 'pages/HomePage/Loadable';
+import MeuAprendizadoPage from 'pages/MeuAprendizadoPage/Loadable';
+import Insights from 'pages/Insights/Loadable';
+import LoginPage from 'pages/LoginPage/Loadable';
 import * as pathNames from 'routes/pathNames';
 
-const routes = (
-  <Switch>
-    <Route exact path={pathNames.BASE_PATH} component={HomePage} />
-    <Route path={pathNames.LOGIN} component={LoginPage} />
-    <ProtectedRoute
-      exact
-      path={pathNames.LEARNER_HOME}
-      component={MeuAprendizadoPage}
-    />
-    <Route path="" component={NotFoundPage} />
-  </Switch>
-);
-
-export default routes;
+export const routes = [
+  {
+    path: pathNames.BASE_PATH,
+    component: LoginPage,
+    exact: true,
+  },
+  {
+    path: pathNames.LOGIN,
+    component: LoginPage,
+  },
+  {
+    path: pathNames.LEARNER_HOME,
+    component: MeuAprendizadoPage,
+  },
+  {
+    path: pathNames.ADMIN_HOME,
+    component: Insights,
+  },
+  {
+    path: '',
+    component: NotFoundPage,
+  },
+];

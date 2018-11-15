@@ -1,4 +1,4 @@
-export const BASE_PATH = '/q';
+export const BASE_PATH = '/';
 
 const PREFIX = BASE_PATH === '/' ? '' : BASE_PATH;
 

@@ -1,4 +1,4 @@
-# react-apollo-auth-boilerplate
+# NPD Frontend
 
 ## Instalação e uso
 Clonar repositório, navegar até a pasta raiz e executar o comando a seguir (requer node e npm):
@@ -11,6 +11,8 @@ npm start
 ```
 
 ## Estrutura do projeto
+
+## TODO: Atualizar descrição da estrutura do projeto, atualmente usando a arquitetura [Fractal](https://hackernoon.com/fractal-a-react-app-structure-for-infinite-scale-4dab943092af)
 
 ### `app/`
 Foi usada a  [arquitetura container/component](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.4rmjqneiw). Componentes são divididos entre as pastas `containers` (smart components) e `components` (dumb components). Fazendo uma citação direta: "**Container components care about how things work, while components care about how things look.**"
@@ -27,7 +29,7 @@ app/
 |    |- |- Header.js __________________# Header.js
 |    |- |- header.module.scss__________# Extensão .module.scss para CSS com escopo local
 |    |- |- index.js____________________# Default export de Header.js
-|    |- Footer/ 
+|    |- Footer/
 |    |- ...
 |  |- containers/______________________# Smart components
 |    |- App/___________________________# Root App component
@@ -36,8 +38,8 @@ app/
 |    |- |- App.js ____________________ # App.js
 |    |- |- app.module.scss_____________# Extensão .module.scss para CSS com escopo local
 |    |- |- index.js ___________________# Default export de App.js
-|    |- HomePage/ 
-|    |- LoginPage/ 
+|    |- HomePage/
+|    |- LoginPage/
 |    |- ...
 |  |- styles/__________________________# Estilos globais
 |- app.jsx____________________________ # App entrypoint

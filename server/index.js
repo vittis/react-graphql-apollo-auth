@@ -10,6 +10,13 @@ const { resolve } = require('path');
 
 const app = express();
 
+const subdomainMiddleware = require('./middlewares/subdomainMiddleware');
+
+// Subdomain validation
+const subdomainRouter = express.Router();
+subdomainRouter.use(subdomainMiddleware);
+app.use('*', subdomainRouter);
+
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
   outputPath: resolve(process.cwd(), 'build'),
