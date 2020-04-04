@@ -45,7 +45,7 @@
     "ip": "1.1.5",
     "jwt-decode": "^2.2.0",
     "lodash": "4.17.11",
-    "minimist": "1.2.0",
+    "minimist": "1.2.3",
     "prop-types": "^15.6.1",
     "react": "16.6.0",
     "react-adopt": "^0.6.0",
