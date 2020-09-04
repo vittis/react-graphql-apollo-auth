@@ -120,7 +120,7 @@
     "jest-cli": "23.6.0",
     "lint-staged": "7.3.0",
     "node-plop": "^0.15.0",
-    "node-sass": "4.9.4",
+    "node-sass": "4.13.1",
     "null-loader": "0.1.1",
     "plop": "2.0.0",
     "postcss-scss": "2.0.0",
