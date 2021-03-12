@@ -125,7 +125,7 @@
     "plop": "2.0.0",
     "postcss-scss": "2.0.0",
     "prettier": "1.14.3",
-    "react-dev-utils": "6.0.5",
+    "react-dev-utils": "11.0.4",
     "react-test-renderer": "16.6.0",
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
